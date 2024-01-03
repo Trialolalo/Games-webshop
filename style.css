@@ -224,10 +224,16 @@ footer ul{
     height: 20vh;
 }
 
+.footer-menu ul{
+    display: flex;
+    padding: 1rem;
+    
+    gap: 1rem;
+}
 
 .end h4{
     font-family: 'Exo 2', sans-serif;
-    font-weight: 300;
+    font-weight: 600;
     color: hsl(0, 0%, 100%);
 }
 
