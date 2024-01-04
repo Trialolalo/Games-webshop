@@ -10,69 +10,17 @@ body{
     align-items: center;
 }
 
-.header-menu{
-    margin: 0.3rem 0;
-}
-
-.header-menu ul{
-    align-items: center;
+header{
     display: flex;
-    gap: 0.3rem;
-    list-style: none;
-    justify-content: space-between;
+    align-items: center;
     border-bottom: solid 4px hsl(0, 0%, 0%);
-    padding: 0.3rem 5rem;
-    font-family: 'Exo 2', sans-serif;
-    font-weight: 800;
-}
-
-.header-menu ul button{
-    background: transparent;
-    border: none;
-    font-family: 'Exo 2', sans-serif;
-    font-weight: 600;
-    font-size: 1.3rem;
-    cursor: pointer;
-}
-
-.logo{
-    width: 8rem;
-    cursor: pointer;
-}
-
-.search-bar svg{
-    width: 2rem;
-    cursor: pointer;
-}
-
-.user-area{
-    display: flex;
-    align-items: center;
-}
-
-.user-area span{
-    display: block;
-    height: 3rem;
-    background: hsl(0, 0%, 0%);
-    box-sizing: border-box;
-    width: 4px;
-    border-radius: 5px;
-    margin: 10px;
-}
-
-.account-icon svg{
-    width: 2.5rem;
-    cursor: pointer;
-}
-
-.cart-icon svg{
-    width: 2.5rem;
-    cursor: pointer;
+    justify-content: center;
 }
 
 main{
     width: 85%;
     padding: 5rem;
+    padding-top: 0;
 }
 
 .titles{
@@ -209,88 +157,6 @@ main{
     cursor: pointer;
 }
 
-.product-data{
-    display: flex;
-    background-color: hsla(0, 0%, 0%, 0.651);
-    border-radius: 10px;
-    margin-bottom: 2rem;
-    text-wrap: wrap;
-    word-wrap: break-word;
-    font-family: 'Exo 2', sans-serif;  
-    font-weight: 100;
-}
 
-.description-box{
-    padding: 1rem;
-    color: hsl(0, 0%, 100%);
-}
-
-.description-box p{
-    margin-bottom: 1.5rem;
-}
-
-.product-data:last-child{
-    justify-content: flex-end;
-}
-
-.price{
-    display: flex;
-    background-color: hsla(0, 0%, 0%, 0.808);
-    border-radius: 10px;
-    font-family: 'Exo 2', sans-serif;  
-    font-weight: 100;
-    color: hsl(0, 0%, 100%);
-    justify-content: flex-end;
-    height: 2rem;
-    max-width: 10rem;
-    align-items: center;
-    padding: 2rem;
-
-}
-
-
-.product-detail img{
-    width: 20rem;
-    object-fit: cover;
-    box-sizing: border-box;
-    padding: 1rem;
-}
-
-footer{
-    background-color: hsl(0, 0%, 0%);
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-}
-
-footer ul{
-    list-style: none;
-    color: white;
-    font-family: 'Exo 2', sans-serif;
-    font-weight: 300;
-}
-
-.footer-menu{
-    width: 80%;
-    justify-content: center;
-    align-items: center;
-    height: 10vh;
-}
-
-.footer-menu ul{
-    display: flex;
-    padding: 2rem;
-    box-sizing: border-box;
-    gap: 1rem;
-    margin-left: 75vh;
-}
-
-.end h4{
-    font-family: 'Exo 2', sans-serif;
-    font-weight: 600;
-    color: hsl(0, 0%, 100%);
-    margin-left: 100vh;
-    padding-bottom: 4rem;
-}
 
 
