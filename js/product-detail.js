@@ -54,6 +54,7 @@ class ProductDetail extends HTMLElement {
             word-wrap: break-word;
             font-family: 'Exo 2', sans-serif;  
             font-weight: 100;
+            
         }
 
         .product-detail img{
@@ -61,6 +62,7 @@ class ProductDetail extends HTMLElement {
             object-fit: cover;
             box-sizing: border-box;
             padding: 1rem;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
         }
 
         .product-detail:hover{
@@ -70,22 +72,6 @@ class ProductDetail extends HTMLElement {
 
         .product-detail:hover img{
             opacity: 0.08;
-        }
-
-        .product-detail svg{
-            width: 6rem;
-            fill: hsl(0, 0%, 100%);
-            position: absolute;
-            opacity: 0;
-            left: 27vh;
-            top: 60vh;
-            visibility: hidden;
-            transition: opacity 0.3s ease, visibility 0.3s ease;
-        }
-
-        .product-detail:hover svg{
-            opacity: 1; 
-            visibility: visible;
         }
 
         .description-box{
@@ -120,8 +106,9 @@ class ProductDetail extends HTMLElement {
 
         .gallery {
             display: flex;
-            justify-content: center;
+            justify-content: flex-start;
             align-items: center;
+            margin: 2rem 0;
         }
 
         .thumbnails {
@@ -135,16 +122,7 @@ class ProductDetail extends HTMLElement {
             cursor: pointer;
         }
 
-        .preview {
-            margin-top: 20px;
-        }
-
-        #preview-image {
-            max-width: 400px;
-            max-height: 400px;
-        }
-
-        .product-data:last-child{
+        main .price{
             justify-content: flex-end;
         }
 
@@ -157,9 +135,15 @@ class ProductDetail extends HTMLElement {
             color: hsl(0, 0%, 100%);
             justify-content: flex-end;
             height: 2rem;
-            max-width: 10rem;
+            max-width: 7rem;
             align-items: center;
             padding: 2rem;
+            margin-left: auto;
+        }
+
+        .price svg{
+            fill: hsla(0, 0%, 100%);
+            width: 3rem;
         }
 
 
@@ -178,9 +162,6 @@ class ProductDetail extends HTMLElement {
             <div class="product-data">
                 <div class="product-detail">
                     <img alt="Stray" src="img/stray.webp">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                        <path d="M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M10,16.5L16,12L10,7.5V16.5Z" />
-                    </svg>
                 </div>
                 <div class="description-box">
                     <h3>
@@ -211,39 +192,39 @@ class ProductDetail extends HTMLElement {
                     </div>
                     <div class="gallery">
                         <div class="thumbnails">
-                            <img alt="Stray Thumbnail" src="img/stray_thumbnail.webp" data-index="0">
-                            <img src="imagen2.jpg" alt="Imagen 2" data-index="1">
-                            <!-- Agrega más imágenes aquí -->
-                        </div>
-                        <div class="preview">
-                            <img class="preview-image"  alt="Stray Preview Image" src="img/stray_preview.webp">
+                            <img alt="Stray Thumbnail 1" src="img/stray_thumbnail.webp" data-index="0">
+                            <img alt="Stray Thumbnail 2" src="img/stray_thumbnail1.webp" data-index="1">
+                            <img alt="Stray Thumbnail 3" src="img/stray_thumbnail2.webp" data-index="2">
                         </div>
                     </div>                    
-                </div>
+                </div> 
             </div>   
             <div class="price">
                 <h2>
                     18.47€
                 </h2>
-            </div>        
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path d="M19 20C19 21.11 18.11 22 17 22C15.89 22 15 21.1 15 20C15 18.89 15.89 18 17 18C18.11 18 19 18.9 19 20M7 18C5.89 18 5 18.89 5 20C5 21.1 5.89 22 7 22C8.11 22 9 21.11 9 20S8.11 18 7 18M7.2 14.63L7.17 14.75C7.17 14.89 7.28 15 7.42 15H19V17H7C5.89 17 5 16.1 5 15C5 14.65 5.09 14.32 5.24 14.04L6.6 11.59L3 4H1V2H4.27L5.21 4H20C20.55 4 21 4.45 21 5C21 5.17 20.95 5.34 20.88 5.5L17.3 11.97C16.96 12.58 16.3 13 15.55 13H8.1L7.2 14.63M8.5 11H10V9H7.56L8.5 11M11 9V11H14V9H11M14 8V6H11V8H14M17.11 9H15V11H16L17.11 9M18.78 6H15V8H17.67L18.78 6M6.14 6L7.08 8H10V6H6.14Z" />
+                </svg>
+            </div>  
         </main>
       `;
       this.setupGallery();
     }
   
-    setupGallery() {
-      const thumbnails = this.shadow.querySelectorAll('.thumbnails img');
-      const previewImage = this.shadow.querySelector('#preview-image');
+    // setupGallery() {
+    //   const thumbnails = this.shadow.querySelectorAll('.thumbnails img');
+    //   const previewImage = this.shadow.querySelector('.preview-image');
   
-      thumbnails.forEach(thumbnail => {
-        thumbnail.addEventListener('click', () => {
-          const index = thumbnail.getAttribute('data-index');
-          const imageUrl = thumbnail.getAttribute('src');
-          previewImage.setAttribute('src', imageUrl);
-          previewImage.setAttribute('data-current-index', index);
-        });
-      });
-    }
+    //   thumbnails.forEach(thumbnail => {
+    //     thumbnail.addEventListener('click', () => {
+    //       const index = thumbnail.getAttribute('data-index');
+    //       const imageUrl = thumbnail.getAttribute('src');
+    //       previewImage.setAttribute('src', imageUrl);
+    //       previewImage.setAttribute('data-current-index', index);
+    //     });
+    //   });
+    // }
 }
   
 customElements.define('product-detail-component', ProductDetail);
