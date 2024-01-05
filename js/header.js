@@ -21,7 +21,7 @@ class Header extends HTMLElement {
             .header-menu ul{
                 align-items: center;
                 display: flex;
-                gap: 0.3rem;
+                gap: 0.2rem;
                 list-style: none;
                 justify-content: space-between;
                 font-family: 'Exo 2', sans-serif;
@@ -66,6 +66,39 @@ class Header extends HTMLElement {
                 fill: hsl(0, 0%, 100%, 0.4);
             }
 
+            .categories-menu ul{
+                padding: 0;
+            }
+
+            .categories-menu li{
+                max-height: 3.5rem;
+            }
+
+            .categories-menu .submenu {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                background-color: hsla(0, 0%, 0%, 0.94);
+                display: none;
+                z-index: 1005;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                text-align: center;
+            }
+
+            .categories-menu:hover .submenu {
+                display: block;
+            }
+
+            .categories-menu .submenu a{
+                color: hsl(0, 0%, 100%);
+                text-decoration: none;
+                display: block;
+                padding: 10px;
+            }
+
         </style>
         
         <section class="header-menu">
@@ -89,8 +122,20 @@ class Header extends HTMLElement {
                         <path d="M556.725 34.0847C563.748 57.7077 566.303 87.3504 565.633 119.946C564.997 150.943 561.46 184.102 556.408 216.43L427.99 142.679C444.887 124.517 465.843 103.388 487.789 83.992C511.339 63.178 535.509 44.8284 556.725 34.0847ZM572.723 21.7812C570.163 14.3976 561.84 10.7746 554.678 14.0028C529.461 25.3689 501.28 46.7115 475.207 69.7555C448.981 92.9341 424.262 118.401 405.921 138.616L397.989 147.359L570.655 246.522L572.939 233.093C579.247 196.003 583.879 156.888 584.629 120.336C585.377 83.9175 582.292 49.3755 572.723 21.7812Z"/>
                     </svg>
                 </li>
-                <li>
+                <li class="categories-menu">
                     <button>CATEGORIES</button>
+                    <ul class="submenu">
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Adventure</a></li>
+                        <li><a href="#">Cats</a></li>
+                        <li><a href="#">Fighting</a></li>
+                        <li><a href="#">FPS</a></li>
+                        <li><a href="#">Metroidvania</a></li>
+                        <li><a href="#">MMORPG</a></li>
+                        <li><a href="#">Party</a></li>
+                        <li><a href="#">Platform</a></li>
+                        <li><a href="#">Puzzle</a></li>
+                    </ul>
                     <svg class="logo-negative" viewBox="0 0 714 476" xmlns="http://www.w3.org/2000/svg">
                         <path class="bigotes" d="M518.915 427.501C476.962 457.822 420.006 475.957 358 475.957C295.994 475.957 239.038 457.822 197.085 427.501C155.158 397.198 127 353.599 127 303.457C127 253.315 155.158 209.716 197.085 179.414C239.038 149.093 295.994 130.957 358 130.957C420.006 130.957 476.962 149.093 518.915 179.414C560.842 209.716 589 253.315 589 303.457C589 353.599 560.842 397.198 518.915 427.501ZM358 455.957C474.532 455.957 569 387.681 569 303.457C569 219.234 474.532 150.957 358 150.957C241.468 150.957 147 219.234 147 303.457C147 387.681 241.468 455.957 358 455.957Z"/>
                         <path d="M585 303.5C585 394.351 483.369 468 358 468C232.631 468 131 394.351 131 303.5C131 212.649 232.631 139 358 139C483.369 139 585 212.649 585 303.5Z"/>

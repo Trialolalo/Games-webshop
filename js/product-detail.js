@@ -135,15 +135,21 @@ class ProductDetail extends HTMLElement {
             color: hsl(0, 0%, 100%);
             justify-content: flex-end;
             height: 2rem;
-            max-width: 7rem;
+            max-width: 8rem;
             align-items: center;
             padding: 2rem;
             margin-left: auto;
+            cursor: pointer;
+        }
+
+        .price:hover{
+            background-color: hsla(0, 0%, 0%, 0.9);
         }
 
         .price svg{
             fill: hsla(0, 0%, 100%);
-            width: 3rem;
+            width: 2rem;
+            margin-left: 0.8rem;
         }
 
 
@@ -209,7 +215,7 @@ class ProductDetail extends HTMLElement {
             </div>  
         </main>
       `;
-      this.setupGallery();
+    //   this.setupGallery();
     }
   
     // setupGallery() {

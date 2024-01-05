@@ -30,18 +30,15 @@ class Footer extends HTMLElement {
             }
 
             .footer-menu{
-                width: 80%;
-                justify-content: center;
-                align-items: center;
                 height: 10vh;
             }
 
             .footer-menu ul{
                 display: flex;
                 padding: 2rem;
-                box-sizing: border-box;
                 gap: 1rem;
-                margin-left: 65vh;
+                justify-content: center;
+                align-items: center;
             }
 
             .footer-menu li{
@@ -50,8 +47,10 @@ class Footer extends HTMLElement {
 
             .social-media ul{
                 display: flex;
+                flex: 1;
                 gap: 1rem;
-                margin-left: 83vh;
+                margin-left: auto;
+                justify-content: center;
                 align-items: center;
             }
 
@@ -65,12 +64,15 @@ class Footer extends HTMLElement {
             }
 
             .end h4{
+                display: flex;
                 font-family: 'Exo 2', sans-serif;
                 font-weight: 600;
                 color: hsl(0, 0%, 100%);
-                margin-left: 95vh;
+                padding-left: 2.5rem;
                 padding-bottom: 4rem;
-                margin-bottom: 0rem;
+                margin: 0rem;
+                justify-content: center;
+                align-items: center;
             }
            
         </style>
